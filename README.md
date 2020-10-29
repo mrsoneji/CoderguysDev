@@ -97,8 +97,10 @@ A) Describe the strategy used to consume the API endpoint and data management.
 
 B) Explain which library was used for the routing and why. Would you use the same for a consumer-facing app targeting thousands of users? Why?
   I decided to use react-navigation since it's the most widely-used and I'm very familiar with it. It's most easy to implement deep linking with react-native-router but it's possible with react-navigation though.
+  
 C) Have you used any strategy to optimize the performance of the list generated for the first feature?
   I prefer to use map function and render inside of it instead of use FlatList, since it's more readable. It's known that FlatList it's most performant than using a loop, but since it's a shortlist of items I decided to use the mapping approach.
+  
 D) Would you like to add any further comments or observations?
   Concerning graphQL API call, I was first trying to use ApolloClient, but ApolloClient seems to be unstable since was giving me incompatibility errors with react hooks since under the hood Apollo Client uses the useState function. Finally, I take the Axios approach and embedding the queries inside the POST calls.
   The font used in the designs are a Paid one (50USD) and is called Passenger Display Bold. I used the most similar one which is UTMTimesBold.
