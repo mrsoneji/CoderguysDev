@@ -5,6 +5,11 @@
 Just install the packages using `npm install` and then `expo start -c` for build and run the project.
 Maybe you will need to install expo globally using `npm i -g expo-cli`.
 
+## Testing RN-Challenge
+
+There is a bunch of unit tests concerning graphql calls. Can be run using `npm test`.
+Snapshots testing are incomplete, so I take the risk to lose some bonus points on this one since there is a lot of non-expo components that are difficult (if not impossible) to test.
+
 ## Overview:
 
 Implement a simple mobile cocktails catalogue (Master / Detail). The catalogue consists of a table view list of cocktails with their name, toppings and photo. Once the user taps on a specific row it will push a new screen with that drink’s details: Name, Photo, Ingredients and Preparation.
