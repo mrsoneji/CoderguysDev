@@ -3,11 +3,13 @@ import React from 'react'
 // react native-related components
 import { View, LogBox, StyleSheet, Text, TouchableHighlight } from 'react-native'
 
-export default function IngredientCardItem(props) {
+import { withTheme } from 'react-native-elements'
+
+function IngredientCardItem(props) {
     return (
         <View>
-            <TouchableHighlight style={ styles.container }><View></View></TouchableHighlight>
-            <Text style={ styles.text }>{ props.title }</Text>
+            <TouchableHighlight style={ [ styles.container, { borderColor: props.theme.Foreground }] }><View></View></TouchableHighlight>
+            <Text style={ [styles.text, { color: props.theme.Foreground }] }>{ props.title }</Text>
         </View>
     )
 }
@@ -19,7 +21,6 @@ const styles = StyleSheet.create({
         marginRight: 24, 
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#000000',
         shadowColor: "#000000",
         shadowOpacity: 0.5,
         shadowRadius: 2,
@@ -28,7 +29,6 @@ const styles = StyleSheet.create({
         height: 162,
     },
     text: {
-        color: '#000000',
         fontSize: 11,
         marginTop: 8,
         marginLeft: 4,
@@ -45,3 +45,5 @@ const styles = StyleSheet.create({
         opacity: 0.4,
     }
 })
+
+export default withTheme(IngredientCardItem)

@@ -69,7 +69,7 @@ class MainScreen extends React.Component {
       <ScrollView style={ [styles.container, { backgroundColor: theme.Background }] } showsVerticalScrollIndicator={false} >
         <CustomInput 
           icon={ require('../assets/images/63322.png') }
-          containerStyle={ styles.customInputContainer }
+          containerStyle={ [styles.customInputContainer, { backgroundColor: theme.SearchBar }] }
           borderColor='#25AAE1'
           placeholder="Search Cocktails..."
           onChangeText={ term => this.onSearch(term) } 
@@ -82,16 +82,16 @@ class MainScreen extends React.Component {
             ref={(tag) => {
               this.tag = tag
             }}
-            itemStyle={{ borderRadius: 18, }}
-            itemLabelStyle={{ fontSize: 9 }}
-            itemStyleSelected={{ backgroundColor: theme.Selected, borderWidth: 0 }}
-            itemLabelStyleSelected={{ color: 'black' }}
+            itemStyle={{ borderRadius: 18, backgroundColor: theme.SearchBar }}
+            itemLabelStyle={{ fontSize: 9, color: theme.Foreground }}
+            itemStyleSelected={{ backgroundColor: 'red', borderWidth: 0 }}
+            itemLabelStyleSelected={{ color: 'black',  }}
             onMaxError={() => {
               Alert.alert('Ops', 'Max reached')
             }}
           />
         </View>
-        <Text style={ styles.title }>Famous Cocktails</Text>
+        <Text style={ [styles.title, { color: theme.Foreground }] }>Famous Cocktails</Text>
         <CocktailCardCollection onPress={ this.onCardPress } style={ styles.cocktailCardCollection } data={ this.state.cocktails }/>
       </ScrollView>
     )

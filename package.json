@@ -27,6 +27,7 @@
     "react-native-gesture-handler": "^1.7.0",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.4",
+    "react-native-stars": "^1.2.2",
     "react-native-tag-select": "^2.0.0",
     "react-native-web": "~0.13.7",
     "react-redux": "7.2.1",

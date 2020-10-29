@@ -24,9 +24,10 @@ export const store = createStore(
 // default theme: light
 const theme = {
   Background: '#F9F9F9',
-  Foreground: '#FFFFFF',
+  Foreground: '#373737',
+  SearchBar: '#FFFFFF',
   Selected: '#F3C24A',
-  Unselected: '#FDF3DB',
+  CurrentTab: '#FDF3DB',
 }
 
 export default class App extends React.Component {

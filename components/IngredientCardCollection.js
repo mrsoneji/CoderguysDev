@@ -16,7 +16,7 @@ export default class IngredientCardCollection extends React.Component {
 
     render() {
         return (
-            <ScrollView style={ [styles.container, this.props.style] } horizontal={ true }>
+            <ScrollView style={ [styles.container, this.props.style] } horizontal={ true } showsHorizontalScrollIndicator={ false }>
                 { this.props.data.map(item => {
                     return (<IngredientCardItem key={ item.idIngredient } title={ item.strIngredient } />) 
                 })

@@ -5,7 +5,9 @@ import { View, LogBox, StyleSheet, Text, TouchableHighlight } from 'react-native
 import AsyncImage from '../components/AsyncImage'
 import CachedImage from 'react-native-expo-cached-image'
 
-export default class CocktailCardItem extends React.Component {
+import { withTheme } from 'react-native-elements'
+
+class CocktailCardItem extends React.Component {
     constructor(props) {
         super(props);
     
@@ -13,6 +15,7 @@ export default class CocktailCardItem extends React.Component {
     }
 
     render() {
+        const { theme } = this.props
         const { 
             title = '',
             backgroundColor = 'red',
@@ -25,7 +28,7 @@ export default class CocktailCardItem extends React.Component {
             <TouchableHighlight onPress={ () => onPress({ id, title }) } style={ [ styles.container, { backgroundColor } ] }>
                 <View style={ styles.innerContainer }>
                     <CachedImage source={{ uri: imageUri } } style={[ styles.image ]} />
-                    <Text style={ styles.text }>{ title }</Text>
+                    <Text style={ [ styles.text, { color: theme.Foreground }] }>{ title }</Text>
                 </View>
             </TouchableHighlight>
         )
@@ -53,7 +56,6 @@ const styles = StyleSheet.create({
         height: 162,
     },
     text: {
-        color: '#000000',
         fontSize: 15,
         fontWeight: 'bold',
         marginTop: 18,
@@ -71,3 +73,6 @@ const styles = StyleSheet.create({
         opacity: 0.4,
     }
 })
+
+
+export default withTheme(CocktailCardItem)
