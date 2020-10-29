@@ -1,5 +1,9 @@
 # Code Challenge
 
+## Running RN-Challenge
+
+Just install the packages using `npm install` and then `expo start -c` for build and run the project.
+Maybe you will need to install expo globally using `npm i -g expo-cli`.
 
 ## Overview:
 
