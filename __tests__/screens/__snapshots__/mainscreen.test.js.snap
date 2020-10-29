@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CocktailCardItem renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "aspectRatio": 1,
+        "borderColor": "#ffffff",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "height": 100,
+        "margin": "1%",
+        "shadowColor": "#000000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 2,
+        "width": "48%",
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "cache": "force-cache",
+        "uri": "",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": "100%",
+          "left": 0,
+          "opacity": 0.4,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "top": 0,
+          "width": "100%",
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "marginLeft": 8,
+        "marginTop": 18,
+        "width": 100,
+      }
+    }
+  >
+    Pina Colada
+  </Text>
+</View>
+`;
