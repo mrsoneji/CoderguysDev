@@ -92,9 +92,15 @@ Current Tab | ![#FDF3DB](https://via.placeholder.com/15/FDF3DB/000000?text=+) `#
 
 i) Implement a search by name functionality on the first screen that automatically filters the results while typing, only showing the rows that satisfy the criteria entered by the user.
 
+  Search by name was added. It uses the `ilike` graphQL filter, which is not case-sensitive. I also added wildcards to search drinks containing the criteria. It would be great to allow fuzzy search but I couldn't find a performant way to do it in graphQL.
+
 ii) Add functionality to the categories filter in the home screen. Only one category should be selected at any time.
 
+  Tag cloud was added, but drink collection doesn't seem to have a field to use as a filter.
+
 iii) Add functionality to the light/dark theme switch in the header.
+
+  This feature was added using react-native-elements's ThemeProvider, which uses Context internally to provide the theme state across components.
 
 iv) Allow user to add a cocktail to its favorites. This information should be saved in the local storage.
 
