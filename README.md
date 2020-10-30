@@ -116,7 +116,7 @@ D) Would you like to add any further comments or observations?
 
   Concerning graphQL API call, I was first trying to use ApolloClient, but ApolloClient seems to be unstable since was giving me incompatibility errors with react hooks since under the hood Apollo Client uses the useState function. Finally, I take the Axios approach and embedding the queries inside the POST calls.
   
-  The font used in the designs are a Paid one (50USD) and is called Passenger Display Bold. I used the most similar one which is UTMTimesBold.
+  The font used in the designs are a Paid one (50USD) and is called Passenger Display Bold. I used the most similar one which is UTMTimesBold, which is free.
   
   The thumbnails of the drink collection doesn't seem to be the same as in the design, so the final result is a little different from the mock.
   
